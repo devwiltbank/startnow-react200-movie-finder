@@ -67,7 +67,7 @@ describe('express', () => {
   .end()
   .then(btn => {
     expect(btn).to.exist;
-  })).timeout(6500);
+  })).timeout(20000);
 
   it('should have the correct movie title on movie details page', () =>
     nightmare
@@ -77,7 +77,7 @@ describe('express', () => {
       .end()
       .then((text) => {
         expect(text).to.equal('');
-      })).timeout(6500);
+      })).timeout(20000);
   
   it('should have the runtime on movie details page', () =>
     nightmare
@@ -88,7 +88,7 @@ describe('express', () => {
       .then((text) => {
       expect(text).to.contain('');
       })
-  ).timeout(6000);
+  ).timeout(20000);
   
   it('should have the movie rating on movie details page', () =>
     nightmare
@@ -99,7 +99,7 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.contain('');
       })
-  ).timeout(6000);
+  ).timeout(20000);
   
   it('should have the movie poster on movie details page', () =>
     nightmare
@@ -110,7 +110,7 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.exist;
       })
-  ).timeout(6000);
+  ).timeout(20000);
 
 
 });

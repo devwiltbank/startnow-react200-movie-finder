@@ -36,35 +36,36 @@ export default class MovieSearchContainer extends React.Component {
             <h1 className="display-4">Movie Finder</h1>
             <p className="lead">Search OMDB for movie details</p>
             <hr className="my-4"></hr>
-            <p>Enter a movie title or actor name...</p>
+            <p>Enter a movie title...</p>
             <p className="lead"></p>
             <div className="input-group mb-3">
               <input onKeyDown={this.enter}         
                     onChange={this.handleSearchInput}
                     type="text" 
                     className="form-control" 
-                    placeholder='The Matrix'
+                    id='input'
                     >
               </input>
               <div className="input-group-append">
                 <button onClick={this.handleSearchButton}
                         className="btn btn-outline-secondary"
+                        id='button'
                         type="button">Button
                 </button>
               </div>
             </div>
             {(showMovieData) &&
               <div id='results' name='results' className='ms-results'>
-              {movieData.Search.filter(movie => movie.Poster !== "N/A").map((movie, index) =>
-                <div className='ms-indiv-result' key={index}>
-                  <img className='ms-poster' src={`${movie.Poster}`} />
-                    <div className='ms-movie'>
-                      <div>{movie.Title}</div>
+                {movieData.Search.filter(movie => movie.Poster !== "N/A").map((movie, index) =>
+                  <div className='ms-indiv-result' key={index}>
+                    <img className='ms-poster' src={`${movie.Poster}`} />
+                      <div className='ms-movie'>
+                        <div id='search-title'>{movie.Title}</div>
                         <div>{movie.Year}</div>
-              </div>
-              <Link to={`/movie/${movie.imdbID}`} className='ms-movie-button'>More Information</Link>
-              </div>
-              )}
+                      </div>
+                    <Link to={`/movie/${movie.imdbID}`} type='button' className='btn ms-movie-button'>More Information</Link>
+                  </div>
+                )}
               </div>
             }
         </div>

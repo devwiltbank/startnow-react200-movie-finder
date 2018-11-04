@@ -1,0 +1,28 @@
+/****************************************\
+|   Movie Finder "Mock-up" description   |  
+|                 DW                     |
+|            Nov. 11, 2018               |
+\****************************************/
+
+Presentational components:
+    1. Title and Search bar -
+        Build inside a bootstrap jumbotron
+        Elements to stretch but remain
+        centered.
+
+    2. Result display - 
+        Use a jumbotron with possibly one or
+        two cards inside.  Left side will
+        show movie poster.  Right side will
+        contains Movie title, release year
+        then a divider line, then a short
+        plot description.  
+
+        The "More Info" link in the bottom
+        right of this cpontainer should
+        expand the window and display more
+        info instead of taking the user to 
+        a new page.
+
+    3. 
+

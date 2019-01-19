@@ -13,7 +13,7 @@ export default class MovieSearchContainer extends React.Component {
 
   enter(event) {
     if (event.key === 'Enter') {
-      this.handleSearchButton
+      this.handleSearchButton();
     }
   }
 
@@ -40,17 +40,17 @@ export default class MovieSearchContainer extends React.Component {
           <p className="lead"></p>
           <div className="input-group mb-3">
             <input onKeyDown={this.enter}
-              onChange={this.handleSearchInput}
-              type="text"
-              className="form-control"
-              id='input'
+                   onChange={this.handleSearchInput}
+                   type="text"
+                   className="form-control"
+                   id='input'
             >
             </input>
             <div className="input-group-append">
               <button onClick={this.handleSearchButton}
-                className="btn btn-outline-secondary"
-                id='button'
-                type="button">Button
+                      className="btn btn-outline-secondary"
+                      id='button'
+                      type="submit">Button
                 </button>
             </div>
           </div>

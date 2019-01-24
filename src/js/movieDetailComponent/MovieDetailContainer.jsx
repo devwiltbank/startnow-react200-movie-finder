@@ -6,7 +6,7 @@ export default class MovieDetailContainer extends React.Component {
   constructor(props) {
     super(props);
 
-   
+
   }
 
   componentDidMount() {
@@ -17,11 +17,11 @@ export default class MovieDetailContainer extends React.Component {
 
   render() {
     const { movieDetail } = this.props;
-       
+
     return (
       <div>
-        
-         <Link to={'/'} className='md-back-link'><i className="fas fa-chevron-left"></i>Go Back</Link>
+
+        <Link to={'/'} className='md-back-link'><i className="fas fa-chevron-left"></i>Go Back</Link>
         <h1 className='md-title'>Movie Details</h1>
         <div className='md-movie-details'>
           <div className='image-parent'>
@@ -44,6 +44,7 @@ export default class MovieDetailContainer extends React.Component {
                 <label>IMDB </label>{movieDetail.imdbRating}/10
               </li>
             </ul>
+            <Link to={'/'} className='md-back-link'><i className="fas fa-chevron-left"></i>Go Back</Link>
           </div>
         </div>
       </div>
